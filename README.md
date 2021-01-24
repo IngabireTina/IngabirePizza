@@ -39,6 +39,7 @@ Email: ingabire067@gmail.com<br>
 Tel: +250789942598
 <hr>
 Link to live site on GitHub Pages
+https://ingabiretina.github.io/IngabirePizza/
 
 <hr>
 
