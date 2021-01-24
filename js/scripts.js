@@ -181,6 +181,12 @@ $("document").ready(function(){
             
         }
 
+        var numberOfOrders = parseInt($("#number-of-pizza").val());
+
+        var totalPrice = orderedPizza.calculateTotalPrice(numberOfOrders);
+
+        $(".total-price").append("<h4 class='alert alert-info mt-2'>The Total charge is: " +totalPrice + "RWF</h4>")
+
 
     })
 
