@@ -77,6 +77,22 @@ em{
     font-family: 'Roboto', sans-serif;
     
 }
+#home-order{
+    /* height: 40vh;
+    background: url("../images/pizza1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    display: flex;
+    background: url("../images/pizza3.png") no-repeat;
+    background-color: black;
+    height: 20vh;
+    color: white;
+    min-height: 400px;
+    font-family: 'Roboto', sans-serif;
+    background-position: center
+
+}
 .home .max-width{
     margin: auto 0 auto 40px;
 }
@@ -272,7 +288,21 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
+/* order address hide */
 
+#delivery-address { 
+    display: none;
+}
+
+#show-order {
+    display: none;
+}
+
+/* toppings title */
+
+.toppings-title {
+    text-decoration: underline;
+}
 
 /* responsiveness */
 
