@@ -31,7 +31,7 @@ var pizza = function(pizzaName, pizzaCrust, pizzaSize){
  }
  
  pizza.prototype.getDeliveryPrice = function(){
-     return 1000;
+     return 1500;
  }
 
  pizza.prototype.setDeliveryAddress = function(deliveryAddress){
@@ -40,24 +40,24 @@ var pizza = function(pizzaName, pizzaCrust, pizzaSize){
 
  pizza.prototype.getPizzaSizePrice = function(pizzaSize){
      if(pizzaSize === "small"){
-         return 1000;
+         return 1500;
      }
      else if(pizzaSize === "medium"){
-         return 2000;
-     }else{
          return 2500;
+     }else{
+         return 3500;
      }
  }
 
 pizza.prototype.getPizzaCrustPrice = function(crust){
     if(this.pizzaCrust === "crispy"){
-        return 1000;
-    }
-    else if(this.pizzaCrust === "stuffed"){
         return 1500;
     }
+    else if(this.pizzaCrust === "stuffed"){
+        return 2000;
+    }
     else{
-        return 800;
+        return 1000;
     }
 }
 
@@ -97,11 +97,11 @@ pizza.prototype.setToppings = function(toppings){
     } 
 }
 
-var onion = new topping("onion", 200);
-var onion = new topping("onion", 200);
-var tomatoe = new topping("tomatoe", 200);
+
+var onion = new topping("onion", 250);
+var tomatoe = new topping("tomatoe", 250);
 var cheese = new topping("cheese", 500);
-var spinach = new topping("spinach", 200);
+var spinach = new topping("spinach", 250);
 var mushroom = new topping("mushroom", 300);
 var olive = new topping("olive", 300);
 var saucage = new topping("saucage", 500);
