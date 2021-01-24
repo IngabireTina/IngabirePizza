@@ -12,6 +12,7 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
 
     })
+    
 
 });
 
@@ -129,3 +130,16 @@ pizza.prototype.calculateTotalPrice = function(numberOfOrders){
 
 
 }
+
+/////////////
+
+$("document").ready(function(){
+    $("input.delivery-yes").click(function(){
+        alert("The delivery charge is:" + new pizza().getDeliveryPrice());
+        $("#delivery-address").show();
+
+    });
+    
+
+});
+
