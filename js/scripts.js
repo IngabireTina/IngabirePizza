@@ -95,3 +95,15 @@ pizza.prototype.setToppings = function(toppings){
         }
     } 
 }
+
+var onion = new topping("onion", 200);
+var onion = new topping("onion", 200);
+var tomatoe = new topping("tomatoe", 200);
+var cheese = new topping("cheese", 500);
+var spinach = new topping("spinach", 200);
+var mushroom = new topping("mushroom", 300);
+var olive = new topping("olive", 300);
+var saucage = new topping("saucage", 500);
+var chicken = new topping("chicken", 1000);
+var pepper = new topping("pepper", 200);
+var ham = new topping("ham", 1000);
