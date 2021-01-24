@@ -59,3 +59,39 @@ pizza.prototype.getPizzaCrustPrice = function(crust){
         return 800;
     }
 }
+
+pizza.prototype.setToppings = function(toppings){
+    for(var i=0; i<toppings.length; i++) {
+
+        if(toppings[i] === "onion"){
+            this.toppings.push(onion)
+        }
+        if(toppings[i] === "tomatoe"){
+            this.toppings.push(tomatoe)
+        }
+        if(toppings[i] === "cheese"){
+            this.toppings.push(cheese)
+        }
+        if(toppings[i] === "spinach"){
+            this.toppings.push(spinach)
+        }
+        if(toppings[i] === "mushroom"){
+            this.toppings.push(mushroom)
+        }
+        if(toppings[i] === "olive"){
+            this.toppings.push(olive)
+        }
+        if(toppings[i] === "chicken"){
+            this.toppings.push(chicken)
+        }
+        if(toppings[i] === "saucage"){
+            this.toppings.push(saucage)
+        }
+        if(toppings[i] === "ham"){
+            this.toppings.push(ham)
+        }
+        if(toppings[i] === "pepper"){
+            this.toppings.push(pepper)
+        }
+    } 
+}
