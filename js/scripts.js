@@ -141,6 +141,38 @@ $("document").ready(function(){
     });
     $("input#delivery-no").click(function(){
         $("#delivery-address").hide();
+    });
+
+    function resetField(){
+        $("#pizza-name").val("");
+        $("input[type='radio'][name='delivered']").prop("checked", false);
+        $("input[type='checkbox'][name='toppings[]']").prop("checked", false);
+        $("#delivery-address").val("");
+        $("#delivery-address").hide();
+        $("#number-of-pizza").val("");
+    }
+
+    $("form#order-form").submit(function(event){
+        var inputtedPizzaName = $("#pizza-name").val();
+        var selectedPizzaSize = $("#pizza-size").val();
+        var selectedPizzaCrust = $("#pizza-crust").val();
+        var deliveryChoice = $("input[type='radio'][name='delivered']:checked").val();
+        var deliveryAddress = "";
+        
+        var selectedToppings = [];
+
+        var index = 0;
+
+        $(":checkbox:checked").each(function(){
+            selectedToppings[index ++] = $(this).val();
+
+
+        });
+        var orderedPizza = new pizza(inputtedPizzaName, selectedPizzaCrust, selectedPizzaSize);
+
+        orderedPizza.setToppings(selectedToppings);
+
+
     })
 
 });
