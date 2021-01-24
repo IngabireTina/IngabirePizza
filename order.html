@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-       <meta charset-"UTF-8">
+       <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>INGABIRE Clementine Portfolio</title>
        <link rel="preconnect" href="https://fonts.gstatic.com">
        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+       
+       <link rel="stylesheet" href="css/bootstrap.css">
        <link rel="stylesheet" href="css/styles.css">
-
       
        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-       
+       <script src="js/jquery-3.5.1.js"></script>
+       <script src="js/scripts.js"></script>
 
    </head>
    <body>
       <nav class="navbar">
           <div class="max-width">
               <div class="logo">
-                 <a href="#"><strong>Ing</strong><em>PIZZA<span>shop</span></em></a>
+                 <a href="index.html"><strong>Ing</strong><em>PIZZA<span>shop</span></em></a>
               </div>
               <ul class="menu">
-                 <li><a href="#home">Home</a></li>
+                 <li><a href="index.html">Home</a></li>
                  <li><a href="#about">About</a></li>
                  <li><a href="#contact">Contact</a></li>
                  <li><a href="order.html">Make order</a></li>
@@ -43,6 +45,47 @@
                  
              </div>
          </div>
+      </section>
+      <section id="order-form" class="bg-light">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                   <div class="order-title pt-5 pb-2">
+                      <h2 class="text-center"> Fill Order Pizza Form</h2>
+                   </div>
+                   <div class="card">
+                      <div class="card-header">
+                         <div class="card-title">
+                             <h3>Create your Pizza</h3>
+                         </div>
+                      </div>
+                      <div class="card-body">
+                         <div class="card-form">
+                            <form id="order-form">
+                               <div id="new-order">
+                                  <div class="form-group">
+                                      <label for="pizza-name">Customer Name
+                                      </label>
+                                      <input id="pizza-name" type="text" class="form-control">
+
+                                  </div>
+
+                                  <div class="form-group">
+                                     <label for="pizza-size"> Select Piza Size
+                                     </label>
+                                     <select name="pizza-size" id="pizza-size" class="form-control">
+                                        <option></option>
+                                     </select>
+                                  </div>
+                               </div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+         </div>
+
       </section>
       
     
