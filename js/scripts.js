@@ -172,6 +172,15 @@ $("document").ready(function(){
 
         orderedPizza.setToppings(selectedToppings);
 
+        if(deliveryChoice === "true"){
+           
+            deliveryAddress = $("#address").val();
+            orderedPizza.setDeliveryAddress(deliveryAddress);
+            orderedPizza.isDelivered = true;
+            alert("Thank you for ordering. Your Pizza will be delivered to your place : "+orderedPizza.deliveryAddress);
+            
+        }
+
 
     })
 
