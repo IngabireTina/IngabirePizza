@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 });
 
-var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
+var pizza = function(pizzaName, pizzaCrust, pizzaSize){
     this.pizzaName = pizzaName;
     this.pizzaCrust = pizzaCrust;
     this.pizzaSize = pizzaSize;
@@ -24,7 +24,7 @@ var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
 
 }
 
- var Topping = function(toppingName, toppingPrice){
+ var topping = function(toppingName, toppingPrice){
      this.toppingName = toppingName;
      this.toppingPrice = toppingPrice;
  }
@@ -48,3 +48,14 @@ var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
      }
  }
 
+pizza.prototype.getPizzaCrustPrice = function(crust){
+    if(this.pizzaCrust === "crispy"){
+        return 1000;
+    }
+    else if(this.pizzaCrust === "stuffed"){
+        return 1500;
+    }
+    else{
+        return 800;
+    }
+}
