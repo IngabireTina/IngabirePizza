@@ -28,5 +28,8 @@ var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
      this.toppingName = toppingName;
      this.toppingPrice = toppingPrice;
  }
-
  
+ pizza.prototype.getDeliveryPrice = function(){
+     return 1000;
+ }
+
