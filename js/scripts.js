@@ -15,3 +15,18 @@ $(document).ready(function(){
 
 });
 
+var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
+    this.pizzaName = pizzaName;
+    this.pizzaCrust = pizzaCrust;
+    this.pizzaSize = pizzaSize;
+    this.toppings = [];
+    this.isDelivered = false;
+
+}
+
+ var Topping = function(toppingName, toppingPrice){
+     this.toppingName = toppingName;
+     this.toppingPrice = toppingPrice;
+ }
+
+ 
