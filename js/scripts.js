@@ -107,3 +107,25 @@ var saucage = new topping("saucage", 500);
 var chicken = new topping("chicken", 1000);
 var pepper = new topping("pepper", 200);
 var ham = new topping("ham", 1000);
+
+
+pizza.prototype.calculateTotalPrice = function(numberOfOrders){
+    var total = 0;
+    var deliveryPrice = 0;
+    var sizePrice = this.getPizzaSizePrice(this.pizzaSize);
+    var crustPrice = this.getPizzaCrustPrice(this.pizzaCrust)
+    var totalToppings = 0;
+
+    if(this.isDelivered){
+        deliveryPrice = this.getDeliveryPrice()
+    }
+    this.toppings.forEach(function(topping){
+        totalToppings += topping.toppingPrice
+
+    });
+     total = (deliveryPrice + sizePrice + crustPrice + totalToppings) * numberOfOrders;
+    
+     return total;
+
+
+}
