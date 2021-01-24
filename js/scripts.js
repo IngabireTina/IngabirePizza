@@ -139,7 +139,9 @@ $("document").ready(function(){
         $("#delivery-address").show();
 
     });
-    
+    $("input#delivery-no").click(function(){
+        $("#delivery-address").hide();
+    })
 
 });
 
