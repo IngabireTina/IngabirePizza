@@ -33,3 +33,18 @@ var Pizza = function(pizzaName, pizzaCrust, pizzaSize){
      return 1000;
  }
 
+ pizza.prototype.setDeliveryAddress = function(deliveryAddress){
+     this.deliveryAddress = deliveryAddress;
+ }
+
+ pizza.prototype.getPizzaSizePrice = function(pizzaSize){
+     if(pizzaSize === "small"){
+         return 1000;
+     }
+     else if(pizzaSize === "medium"){
+         return 2000;
+     }else{
+         return 2500;
+     }
+ }
+
