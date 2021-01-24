@@ -187,8 +187,44 @@ $("document").ready(function(){
 
         $(".total-price").append("<h4 class='alert alert-info mt-2'>The Total charge is: " +totalPrice + "RWF</h4>")
 
+        $("#checkout").click(function(){
+            $("#show-order").show();
+            
+            $(".ordered-pizza-name").text(orderedPizza.pizzaName);
+            $(".ordered-pizza-size").text(orderedPizza.pizzaSize);
+            $(".ordered-pizza-crust").text(orderedPizza.pizzaCrust);
+            $(".delivery-choice").text(orderedPizza.isDelivered);
+            $(".number-of-order").text(numberOfOrders);
+            
 
-    })
+            orderedPizza.toppings.forEach(function(topping) {
+                $("#toppings").append("<li>" +topping.toppingName+ "</li>")
+            });
+
+
+            $(".ordered-pizza-name-price").text(0);
+            $(".ordered-pizza-size-price").text(orderedPizza.getPizzaSizePrice(selectedPizzaSize));
+            $(".ordered-pizza-crust-price").text(orderedPizza.getPizzaCrustPrice(this.pizzaCrust));
+               
+
+            if(orderedPizza.isDelivered === true){
+                $(".delivery-choice-price").text(orderedPizza.getDeliveryPrice);
+              }else {
+                $(".delivery-choice-price").text(0);
+              }
+
+              orderedPizza.toppings.forEach(function(topping) {
+                $("#toppings-price").append("<li>" +topping.toppingPrice+ "</li>")
+            });
+
+            $(".total").text(totalPrice)
+
+
+        });
+         
+        event.preventDefault();
+        resetField();
+    });
 
 });
 
